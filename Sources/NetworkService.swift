@@ -12,6 +12,7 @@ public enum HTTPMethod {
     case Get
     case Post
     case Put
+    case Delete
     
     var type: String {
         switch self {
@@ -21,6 +22,8 @@ public enum HTTPMethod {
             return "POST"
         case .Put:
             return "PUT"
+        case .Delete:
+            return "DELETE"
         }
     }
 }
