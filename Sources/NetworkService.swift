@@ -40,7 +40,7 @@ public extension Endpoint {
     var url: String { "\(baseUrl)\(path)"}
 }
 
-enum NetworkError: Error {
+public enum NetworkError: Error {
     case urlError
     case decodingError
     case responseError
@@ -67,7 +67,7 @@ enum NetworkError: Error {
 public class NetworkService<EndpointItem: Endpoint>  {
     
     
-    func fetchRequest<T: Decodable >(endpointItem: EndpointItem,_ type: T.Type, completion: @escaping(Result<T,NetworkError>) -> ()) {
+    public func fetchRequest<T: Decodable >(endpointItem: EndpointItem,_ type: T.Type, completion: @escaping(Result<T,NetworkError>) -> ()) {
         
         guard let url = URL(string: endpointItem.url ) else {
             completion(.failure(.urlError))
