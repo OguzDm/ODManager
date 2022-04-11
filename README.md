@@ -1,3 +1,4 @@
 # ODManager
 
-A description of this package.
+You can use Swift Package Manager for ODManager.
+
