@@ -66,6 +66,7 @@ public enum NetworkError: Error {
 
 public class NetworkService<EndpointItem: Endpoint>  {
     
+    public init() {}
     
     public func fetchRequest<T: Decodable >(endpointItem: EndpointItem,_ type: T.Type, completion: @escaping(Result<T,NetworkError>) -> ()) {
         
